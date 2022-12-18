@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Appointment result{% endblock %}
+{% block content %} 
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 hero-header mb-5">
+        <div class="row py-3">
+            <div class="col-12 text-center">
+                <h1 class="display-3 text-white animated zoomIn">Appointment</h1>
+                <a href="" class="h4 text-white">Your</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="" class="h4 text-white">appointment</a>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <div class="container-fluid py-5">
+        <center>
+            <strong>Your Service: </strong>{{ your_service }}<br/>
+            <strong>Your Doctor: </strong>{{ your_doctor }}<br/>
+            <strong>Your Name: </strong>{{ your_name }}<br/>
+            <strong>Your Email: </strong>{{ your_email }}<br/>
+            <strong>Your Date: </strong>{{ your_date }}<br/>
+            <strong>Your Time: </strong>{{ your_time }}<br/>
+
+        <br/><br/>
+        <strong>Note: </strong> This appointment hasn't been set yet.
+        We will contact you shortly via phone to confirm your appointment.
+        </center>    
+    </div>    
+    
+{% endblock %}<h1>Hello appointment!</h1>
+
