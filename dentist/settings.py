@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-77r(**4tj_+o^_+k3(p3-#w)@7=1c65-(aj+euyf+fvjmhkklk'
+SECRET_KEY =  env('DJSECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -130,8 +130,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 HOSTEMAIL=env('HOSTEMAIL')
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'asatotakemoto11@gmail.com'
-EMAIL_HOST_PASSWORD = os.environ['EMAILPASS']
+EMAIL_HOST_USER = env('HOSTEMAIL') 
+EMAIL_HOST_PASSWORD = env('EMAILPASS')
 EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = False
 
